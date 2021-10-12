@@ -8,10 +8,10 @@
 
  Message.destroy_all
  
- Message.create!([{ title: 'morning greetings', body: 'Good morning' },
-   { title: 'afternoon greetings', body: 'Good afternoon' },
-    { title: 'evening greetings', body: 'Good evening' },
-     { title: 'nigt greetings', body: 'Good night' },
-      { title: 'separation greetings', body: 'Goodbye' }])
+ Message.create!([{ id: 1, body: 'Good morning' },
+   { id: 2, body: 'Good afternoon' },
+    { id: 3, body: 'Good evening' },
+     { id: 4, body: 'Good night' },
+      { id: 5, body: 'Goodbye' }])
 
  p "Created #{Message.count} messages"
