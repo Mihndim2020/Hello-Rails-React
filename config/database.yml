@@ -15,7 +15,7 @@ development:
   database: Hello_Rails_React
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: mihndim
-  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
+  password: '1234567'
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -26,7 +26,7 @@ test:
   database: Hello_Rails_React
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: mihndim
-  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
+  password: '1234567'
 
 production:
     adapter: postgresql
@@ -34,6 +34,6 @@ production:
     database: Hello_Rails_React
     pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
     username: mihndim
-    password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
+    password: '1234567'
     host: localhost
  
