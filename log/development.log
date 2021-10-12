@@ -2468,3 +2468,1607 @@ Processing by Rails::WelcomeController#index as */*
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 424)
 
 
+Started GET "/messages" for ::1 at 2021-10-12 05:22:05 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 406 Not Acceptable in 105ms (ActiveRecord: 61.9ms | Allocations: 8450)
+
+
+  
+ActionController::MissingExactTemplate (MessagesController#index is missing a template for request formats: text/html):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+react-rails (2.6.1) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.0) lib/puma/configuration.rb:249:in `call'
+puma (5.5.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.0) lib/puma/server.rb:447:in `process_client'
+puma (5.5.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-10-12 05:22:39 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 406 Not Acceptable in 10ms (ActiveRecord: 1.7ms | Allocations: 1362)
+
+
+  
+ActionController::MissingExactTemplate (MessagesController#index is missing a template for request formats: text/html):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+react-rails (2.6.1) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.0) lib/puma/configuration.rb:249:in `call'
+puma (5.5.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.0) lib/puma/server.rb:447:in `process_client'
+puma (5.5.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-10-12 05:25:10 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mihndim/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mihndim/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.8ms | Allocations: 222)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 955)
+
+
+Started GET "/" for ::1 at 2021-10-12 05:27:00 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 406 Not Acceptable in 65ms (ActiveRecord: 50.9ms | Allocations: 4827)
+
+
+  
+ActionController::MissingExactTemplate (MessagesController#index is missing a template for request formats: text/html):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+react-rails (2.6.1) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.0) lib/puma/configuration.rb:249:in `call'
+puma (5.5.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.0) lib/puma/server.rb:447:in `process_client'
+puma (5.5.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-10-12 05:31:00 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (12.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 406 Not Acceptable in 64ms (ActiveRecord: 12.6ms | Allocations: 2589)
+
+
+  
+ActionController::MissingExactTemplate (MessagesController#index is missing a template for request formats: text/html):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+react-rails (2.6.1) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.0) lib/puma/configuration.rb:249:in `call'
+puma (5.5.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.0) lib/puma/server.rb:447:in `process_client'
+puma (5.5.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-10-12 05:31:05 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 406 Not Acceptable in 9ms (ActiveRecord: 2.2ms | Allocations: 1360)
+
+
+  
+ActionController::MissingExactTemplate (MessagesController#index is missing a template for request formats: text/html):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+react-rails (2.6.1) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.0) lib/puma/configuration.rb:249:in `call'
+puma (5.5.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.0) lib/puma/server.rb:447:in `process_client'
+puma (5.5.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-10-12 05:33:18 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (6.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 406 Not Acceptable in 30ms (ActiveRecord: 6.7ms | Allocations: 2586)
+
+
+  
+ActionController::MissingExactTemplate (MessagesController#index is missing a template for request formats: text/html):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+react-rails (2.6.1) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.0) lib/puma/configuration.rb:249:in `call'
+puma (5.5.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.0) lib/puma/server.rb:447:in `process_client'
+puma (5.5.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-10-12 05:34:16 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 406 Not Acceptable in 20ms (ActiveRecord: 8.3ms | Allocations: 4648)
+
+
+  
+ActionController::MissingExactTemplate (MessagesController#index is missing a template for request formats: text/html):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+react-rails (2.6.1) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.0) lib/puma/configuration.rb:249:in `call'
+puma (5.5.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.0) lib/puma/server.rb:447:in `process_client'
+puma (5.5.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-10-12 05:45:45 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mihndim/Microverse/Hello-Rails-React/public/packs
+[Webpacker] Hash: b3937bc44fc257227bdd
+Version: webpack 4.46.0
+Time: 6366ms
+Built at: 10/12/2021 5:45:54 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-1f19feb72a6f982ef758.js   1.5 MiB       application  [emitted] [immutable]  application
+     js/application-1f19feb72a6f982ef758.js.map  1.69 MiB       application  [emitted] [dev]        application
+         js/hello_react-d0424c60082737fd09b2.js  1.09 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-d0424c60082737fd09b2.js.map  1.26 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-992ff88d5734dd295410.js  1.38 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-992ff88d5734dd295410.js.map  1.56 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-1f19feb72a6f982ef758.js js/application-1f19feb72a6f982ef758.js.map
+Entrypoint hello_react = js/hello_react-d0424c60082737fd09b2.js js/hello_react-d0424c60082737fd09b2.js.map
+Entrypoint server_rendering = js/server_rendering-992ff88d5734dd295410.js js/server_rendering-992ff88d5734dd295410.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 710 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 47 hidden modules
+
+WARNING in ./app/javascript/components/Greeting.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/mihndim/Microverse/Hello-Rails-React/app/javascript/components/Greeting.js: Unexpected token (14:11)
+
+  12 | }
+  13 | Greeting.propTypes = {
+> 14 |   greeting = PropTypes.string
+     |            ^
+  15 | };
+  16 |
+  17 | export default Greeting
+    at Object._raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:541:17)
+    at Object.raiseWithData (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:534:17)
+    at Object.raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:495:17)
+    at Object.unexpected (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3550:16)
+    at Object.checkExpressionErrors (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3643:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11150:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11147:25)
+    at Object.parseExpressionBase (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11059:23)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:39
+    at Object.allowInAnd (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:12922:16)
+    at Object.parseExpression (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:17)
+    at Object.parseStatementContent (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13272:23)
+    at Object.parseStatement (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13139:17)
+    at Object.parseBlockOrModuleBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13728:25)
+    at Object.parseBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13719:10)
+    at Object.parseProgram (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13061:10)
+    at Object.parseTopLevel (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13052:25)
+    at Object.parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14800:10)
+    at parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14852:38)
+    at parser (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/index.js:29:50)
+    at run.next (<anonymous>)
+    at Function.transform (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:261:32)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:223:11)
+ @ ./app/javascript/components sync ^\.\/.*$ ./Greeting.js
+ @ ./app/javascript/packs/application.js
+
+  Rendered messages/index.html.erb within layouts/application (Duration: 8902.8ms | Allocations: 2748)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8980.7ms | Allocations: 15776)
+Completed 200 OK in 9024ms (Views: 8984.2ms | ActiveRecord: 21.5ms | Allocations: 20809)
+
+
+Started GET "/" for ::1 at 2021-10-12 05:46:01 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 4506)
+Completed 200 OK in 21ms (Views: 14.8ms | ActiveRecord: 1.4ms | Allocations: 5710)
+
+
+Started GET "/" for ::1 at 2021-10-12 05:47:39 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4505)
+Completed 200 OK in 22ms (Views: 14.1ms | ActiveRecord: 1.4ms | Allocations: 5679)
+
+
+Started GET "/message" for ::1 at 2021-10-12 05:50:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/message"):
+  
+Started GET "/messages" for ::1 at 2021-10-12 05:51:05 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4513)
+Completed 200 OK in 22ms (Views: 15.2ms | ActiveRecord: 1.6ms | Allocations: 5689)
+
+
+Started GET "/messages" for ::1 at 2021-10-12 05:51:09 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4505)
+Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 1.2ms | Allocations: 5681)
+
+
+Started GET "/" for ::1 at 2021-10-12 05:51:46 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 4505)
+Completed 200 OK in 24ms (Views: 17.6ms | ActiveRecord: 1.5ms | Allocations: 5679)
+
+
+Started GET "/messages" for ::1 at 2021-10-12 05:51:47 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 4505)
+Completed 200 OK in 24ms (Views: 17.2ms | ActiveRecord: 1.2ms | Allocations: 5680)
+
+
+Started GET "/" for ::1 at 2021-10-12 05:53:02 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4505)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 1.1ms | Allocations: 5679)
+
+
+Started GET "/" for ::1 at 2021-10-12 05:53:57 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1832)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 4845)
+Completed 200 OK in 25ms (Views: 20.1ms | ActiveRecord: 0.8ms | Allocations: 6782)
+
+
+Started GET "/" for ::1 at 2021-10-12 05:56:10 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 4513)
+Completed 200 OK in 43ms (Views: 34.8ms | ActiveRecord: 1.4ms | Allocations: 5694)
+
+
+Started GET "/" for ::1 at 2021-10-12 05:58:49 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 4562)
+Completed 200 OK in 54ms (Views: 13.7ms | ActiveRecord: 25.2ms | Allocations: 9453)
+
+
+Started GET "/" for ::1 at 2021-10-12 05:58:52 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (3.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 4505)
+Completed 200 OK in 37ms (Views: 20.2ms | ActiveRecord: 3.3ms | Allocations: 5678)
+
+
+Started GET "/" for ::1 at 2021-10-12 05:59:16 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4575)
+Completed 200 OK in 37ms (Views: 16.7ms | ActiveRecord: 8.5ms | Allocations: 9154)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-12 06:11:58 -0400
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 46ms (Views: 1.2ms | ActiveRecord: 28.9ms | Allocations: 4178)
+
+
+Started GET "/" for ::1 at 2021-10-12 06:12:50 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 4855)
+Completed 200 OK in 32ms (Views: 25.6ms | ActiveRecord: 1.4ms | Allocations: 6800)
+
+
+Started GET "/" for ::1 at 2021-10-12 06:13:32 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 5863)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 5932)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.5ms | Allocations: 7845)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `message' for #<ActionView::Base:0x0000000002d960>
+Did you mean?  @message):
+    1: <%= javascript_pack_tag 'application' %>
+    2: <%= react_component("App") %>
+    3: <%= message.body %>
+    4: <h1>{message.body}</h1>
+  
+app/views/messages/index.html.erb:3
+Started GET "/" for ::1 at 2021-10-12 06:14:04 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1847)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 4868)
+Completed 200 OK in 25ms (Views: 19.6ms | ActiveRecord: 1.2ms | Allocations: 6810)
+
+
+Started GET "/" for ::1 at 2021-10-12 06:14:31 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1844)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 4857)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 1.0ms | Allocations: 6790)
+
+
+Started GET "/" for ::1 at 2021-10-12 06:15:00 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (4.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4507)
+Completed 200 OK in 22ms (Views: 12.1ms | ActiveRecord: 4.1ms | Allocations: 5687)
+
+
+Started GET "/" for ::1 at 2021-10-12 06:15:03 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 4507)
+Completed 200 OK in 33ms (Views: 17.6ms | ActiveRecord: 2.1ms | Allocations: 5681)
+
+
+Started GET "/" for ::1 at 2021-10-12 06:15:05 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (5.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 4507)
+Completed 200 OK in 50ms (Views: 33.1ms | ActiveRecord: 5.3ms | Allocations: 5681)
+
+
+Started GET "/" for ::1 at 2021-10-12 06:15:08 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 4507)
+Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 1.1ms | Allocations: 5681)
+
+
+Started GET "/" for ::1 at 2021-10-12 06:15:11 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 4507)
+Completed 200 OK in 24ms (Views: 15.0ms | ActiveRecord: 2.3ms | Allocations: 5681)
+
+
+Started GET "/messages" for 127.0.0.1 at 2021-10-12 10:30:19 -0400
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (3.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 585ms (Views: 42.3ms | ActiveRecord: 256.6ms | Allocations: 4159)
+
+
+Started GET "/messages" for 127.0.0.1 at 2021-10-12 10:30:36 -0400
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (2.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 1.2ms | ActiveRecord: 2.6ms | Allocations: 1025)
+
+
+Started GET "/messages" for 127.0.0.1 at 2021-10-12 10:31:08 -0400
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (6.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 1.4ms | ActiveRecord: 6.6ms | Allocations: 1025)
+
+
+Started GET "/" for ::1 at 2021-10-12 17:45:51 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (3.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 62.1ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 135.4ms | Allocations: 4515)
+Completed 200 OK in 289ms (Views: 148.5ms | ActiveRecord: 77.8ms | Allocations: 8809)
+
+
+Started GET "/messages" for 127.0.0.1 at 2021-10-12 17:47:37 -0400
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 1.3ms | Allocations: 1026)
+
+
+Started GET "/" for ::1 at 2021-10-12 17:48:33 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mihndim/Microverse/Hello-Rails-React/public/packs
+[Webpacker] Hash: ca2c466e6904725b4bd1
+Version: webpack 4.46.0
+Time: 1786ms
+Built at: 10/12/2021 5:48:38 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-f5b16384bb1a7fe22288.js   1.5 MiB       application  [emitted] [immutable]  application
+     js/application-f5b16384bb1a7fe22288.js.map  1.69 MiB       application  [emitted] [dev]        application
+         js/hello_react-d0424c60082737fd09b2.js  1.09 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-d0424c60082737fd09b2.js.map  1.26 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-71e6e52c04f52ee660ef.js  1.38 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-71e6e52c04f52ee660ef.js.map  1.56 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-f5b16384bb1a7fe22288.js js/application-f5b16384bb1a7fe22288.js.map
+Entrypoint hello_react = js/hello_react-d0424c60082737fd09b2.js js/hello_react-d0424c60082737fd09b2.js.map
+Entrypoint server_rendering = js/server_rendering-71e6e52c04f52ee660ef.js js/server_rendering-71e6e52c04f52ee660ef.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 710 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 47 hidden modules
+
+WARNING in ./app/javascript/components/Greeting.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/mihndim/Microverse/Hello-Rails-React/app/javascript/components/Greeting.js: Unexpected token (14:11)
+
+  12 | }
+  13 | Greeting.propTypes = {
+> 14 |   greeting = PropTypes.string
+     |            ^
+  15 | };
+  16 |
+  17 | export default Greeting
+    at Object._raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:541:17)
+    at Object.raiseWithData (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:534:17)
+    at Object.raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:495:17)
+    at Object.unexpected (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3550:16)
+    at Object.checkExpressionErrors (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3643:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11150:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11147:25)
+    at Object.parseExpressionBase (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11059:23)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:39
+    at Object.allowInAnd (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:12922:16)
+    at Object.parseExpression (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:17)
+    at Object.parseStatementContent (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13272:23)
+    at Object.parseStatement (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13139:17)
+    at Object.parseBlockOrModuleBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13728:25)
+    at Object.parseBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13719:10)
+    at Object.parseProgram (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13061:10)
+    at Object.parseTopLevel (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13052:25)
+    at Object.parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14800:10)
+    at parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14852:38)
+    at parser (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/index.js:29:50)
+    at run.next (<anonymous>)
+    at Function.transform (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:261:32)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:223:11)
+ @ ./app/javascript/components sync ^\.\/.*$ ./Greeting.js
+ @ ./app/javascript/packs/server_rendering.js
+
+  Rendered messages/index.html.erb within layouts/application (Duration: 4053.9ms | Allocations: 2953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4063.7ms | Allocations: 5795)
+Completed 200 OK in 4203ms (Views: 4078.7ms | ActiveRecord: 39.3ms | Allocations: 10683)
+
+
+Started GET "/" for ::1 at 2021-10-12 17:48:46 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 4507)
+Completed 200 OK in 35ms (Views: 26.2ms | ActiveRecord: 2.2ms | Allocations: 5681)
+
+
+Started GET "/" for ::1 at 2021-10-12 17:49:08 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (3.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mihndim/Microverse/Hello-Rails-React/public/packs
+[Webpacker] Hash: 7de6970ef86f29213508
+Version: webpack 4.46.0
+Time: 1635ms
+Built at: 10/12/2021 5:49:11 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-cb10bb2592b90de50de6.js  1.35 MiB       application  [emitted] [immutable]  application
+     js/application-cb10bb2592b90de50de6.js.map  1.54 MiB       application  [emitted] [dev]        application
+         js/hello_react-d0424c60082737fd09b2.js  1.09 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-d0424c60082737fd09b2.js.map  1.26 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-387ccb78657caeb1f280.js  1.23 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-387ccb78657caeb1f280.js.map  1.41 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-cb10bb2592b90de50de6.js js/application-cb10bb2592b90de50de6.js.map
+Entrypoint hello_react = js/hello_react-d0424c60082737fd09b2.js js/hello_react-d0424c60082737fd09b2.js.map
+Entrypoint server_rendering = js/server_rendering-387ccb78657caeb1f280.js js/server_rendering-387ccb78657caeb1f280.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 710 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 32 hidden modules
+
+WARNING in ./app/javascript/components/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/mihndim/Microverse/Hello-Rails-React/app/javascript/components/App.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (9:6)
+
+   7 |     return (
+   8 |       <h1>Home of Champions</h1>
+>  9 |       <Router>
+     |       ^
+  10 |         <Switch>
+  11 |           <Route path= '/'>
+  12 |             <Greeting />            
+    at Object._raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:541:17)
+    at Object.raiseWithData (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:534:17)
+    at Object.raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:495:17)
+    at Object.jsxParseElementAt (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:7434:18)
+    at Object.jsxParseElement (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:7444:17)
+    at Object.parseExprAtom (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:7451:19)
+    at Object.parseExprSubscripts (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11414:23)
+    at Object.parseUpdate (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11394:21)
+    at Object.parseMaybeUnary (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11369:23)
+    at Object.parseMaybeUnaryOrPrivate (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11183:61)
+    at Object.parseExprOps (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11190:23)
+    at Object.parseMaybeConditional (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11160:23)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11123:21)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11081:39
+    at Object.allowInAnd (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:12928:12)
+    at Object.parseMaybeAssignAllowIn (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11081:17)
+    at Object.parseParenAndDistinguishExpression (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:12116:28)
+    at Object.parseExprAtom (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11721:23)
+    at Object.parseExprAtom (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:7456:20)
+    at Object.parseExprSubscripts (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11414:23)
+    at Object.parseUpdate (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11394:21)
+    at Object.parseMaybeUnary (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11369:23)
+    at Object.parseMaybeUnaryOrPrivate (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11183:61)
+    at Object.parseExprOps (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11190:23)
+    at Object.parseMaybeConditional (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11160:23)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11123:21)
+    at Object.parseExpressionBase (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11059:23)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:39
+    at Object.allowInAnd (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:12922:16)
+    at Object.parseExpression (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:17)
+ @ ./app/javascript/components sync ^\.\/.*$ ./App.js
+ @ ./app/javascript/packs/application.js
+
+WARNING in ./app/javascript/components/Greeting.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/mihndim/Microverse/Hello-Rails-React/app/javascript/components/Greeting.js: Unexpected token (14:11)
+
+  12 | }
+  13 | Greeting.propTypes = {
+> 14 |   greeting = PropTypes.string
+     |            ^
+  15 | };
+  16 |
+  17 | export default Greeting
+    at Object._raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:541:17)
+    at Object.raiseWithData (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:534:17)
+    at Object.raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:495:17)
+    at Object.unexpected (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3550:16)
+    at Object.checkExpressionErrors (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3643:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11150:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11147:25)
+    at Object.parseExpressionBase (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11059:23)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:39
+    at Object.allowInAnd (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:12922:16)
+    at Object.parseExpression (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:17)
+    at Object.parseStatementContent (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13272:23)
+    at Object.parseStatement (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13139:17)
+    at Object.parseBlockOrModuleBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13728:25)
+    at Object.parseBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13719:10)
+    at Object.parseProgram (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13061:10)
+    at Object.parseTopLevel (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13052:25)
+    at Object.parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14800:10)
+    at parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14852:38)
+    at parser (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/index.js:29:50)
+    at run.next (<anonymous>)
+    at Function.transform (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:261:32)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:223:11)
+ @ ./app/javascript/components sync ^\.\/.*$ ./Greeting.js
+ @ ./app/javascript/packs/application.js
+
+  Rendered messages/index.html.erb within layouts/application (Duration: 3146.2ms | Allocations: 2952)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3168.5ms | Allocations: 5794)
+Completed 200 OK in 3257ms (Views: 3170.7ms | ActiveRecord: 41.9ms | Allocations: 10373)
+
+
+Started GET "/" for ::1 at 2021-10-12 17:49:32 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mihndim/Microverse/Hello-Rails-React/public/packs
+[Webpacker] Hash: ca2c466e6904725b4bd1
+Version: webpack 4.46.0
+Time: 1869ms
+Built at: 10/12/2021 5:49:36 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-f5b16384bb1a7fe22288.js   1.5 MiB       application  [emitted] [immutable]  application
+     js/application-f5b16384bb1a7fe22288.js.map  1.69 MiB       application  [emitted] [dev]        application
+         js/hello_react-d0424c60082737fd09b2.js  1.09 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-d0424c60082737fd09b2.js.map  1.26 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-71e6e52c04f52ee660ef.js  1.38 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-71e6e52c04f52ee660ef.js.map  1.56 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-f5b16384bb1a7fe22288.js js/application-f5b16384bb1a7fe22288.js.map
+Entrypoint hello_react = js/hello_react-d0424c60082737fd09b2.js js/hello_react-d0424c60082737fd09b2.js.map
+Entrypoint server_rendering = js/server_rendering-71e6e52c04f52ee660ef.js js/server_rendering-71e6e52c04f52ee660ef.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 710 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 47 hidden modules
+
+WARNING in ./app/javascript/components/Greeting.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/mihndim/Microverse/Hello-Rails-React/app/javascript/components/Greeting.js: Unexpected token (14:11)
+
+  12 | }
+  13 | Greeting.propTypes = {
+> 14 |   greeting = PropTypes.string
+     |            ^
+  15 | };
+  16 |
+  17 | export default Greeting
+    at Object._raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:541:17)
+    at Object.raiseWithData (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:534:17)
+    at Object.raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:495:17)
+    at Object.unexpected (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3550:16)
+    at Object.checkExpressionErrors (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3643:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11150:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11147:25)
+    at Object.parseExpressionBase (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11059:23)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:39
+    at Object.allowInAnd (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:12922:16)
+    at Object.parseExpression (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:17)
+    at Object.parseStatementContent (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13272:23)
+    at Object.parseStatement (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13139:17)
+    at Object.parseBlockOrModuleBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13728:25)
+    at Object.parseBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13719:10)
+    at Object.parseProgram (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13061:10)
+    at Object.parseTopLevel (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13052:25)
+    at Object.parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14800:10)
+    at parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14852:38)
+    at parser (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/index.js:29:50)
+    at run.next (<anonymous>)
+    at Function.transform (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:261:32)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:223:11)
+ @ ./app/javascript/components sync ^\.\/.*$ ./Greeting.js
+ @ ./app/javascript/packs/application.js
+
+  Rendered messages/index.html.erb within layouts/application (Duration: 3611.8ms | Allocations: 3042)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3617.4ms | Allocations: 5892)
+Completed 200 OK in 3660ms (Views: 3618.5ms | ActiveRecord: 9.7ms | Allocations: 10500)
+
+
+Started GET "/" for ::1 at 2021-10-12 17:55:29 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 4507)
+Completed 200 OK in 51ms (Views: 16.2ms | ActiveRecord: 19.2ms | Allocations: 8814)
+
+
+Started GET "/" for ::1 at 2021-10-12 17:57:22 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 4507)
+Completed 200 OK in 41ms (Views: 28.8ms | ActiveRecord: 1.9ms | Allocations: 5681)
+
+
+Started GET "/" for ::1 at 2021-10-12 18:13:55 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mihndim/Microverse/Hello-Rails-React/public/packs
+[Webpacker] Hash: ca2c466e6904725b4bd1
+Version: webpack 4.46.0
+Time: 2360ms
+Built at: 10/12/2021 6:13:59 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-f5b16384bb1a7fe22288.js   1.5 MiB       application  [emitted] [immutable]  application
+     js/application-f5b16384bb1a7fe22288.js.map  1.69 MiB       application  [emitted] [dev]        application
+         js/hello_react-d0424c60082737fd09b2.js  1.09 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-d0424c60082737fd09b2.js.map  1.26 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-71e6e52c04f52ee660ef.js  1.38 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-71e6e52c04f52ee660ef.js.map  1.56 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-f5b16384bb1a7fe22288.js js/application-f5b16384bb1a7fe22288.js.map
+Entrypoint hello_react = js/hello_react-d0424c60082737fd09b2.js js/hello_react-d0424c60082737fd09b2.js.map
+Entrypoint server_rendering = js/server_rendering-71e6e52c04f52ee660ef.js js/server_rendering-71e6e52c04f52ee660ef.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 710 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 47 hidden modules
+
+WARNING in ./app/javascript/components/Greeting.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/mihndim/Microverse/Hello-Rails-React/app/javascript/components/Greeting.js: Unexpected token (14:11)
+
+  12 | }
+  13 | Greeting.propTypes = {
+> 14 |   greeting = PropTypes.string
+     |            ^
+  15 | };
+  16 |
+  17 | export default Greeting
+    at Object._raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:541:17)
+    at Object.raiseWithData (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:534:17)
+    at Object.raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:495:17)
+    at Object.unexpected (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3550:16)
+    at Object.checkExpressionErrors (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3643:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11150:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11147:25)
+    at Object.parseExpressionBase (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11059:23)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:39
+    at Object.allowInAnd (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:12922:16)
+    at Object.parseExpression (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:17)
+    at Object.parseStatementContent (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13272:23)
+    at Object.parseStatement (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13139:17)
+    at Object.parseBlockOrModuleBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13728:25)
+    at Object.parseBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13719:10)
+    at Object.parseProgram (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13061:10)
+    at Object.parseTopLevel (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13052:25)
+    at Object.parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14800:10)
+    at parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14852:38)
+    at parser (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/index.js:29:50)
+    at run.next (<anonymous>)
+    at Function.transform (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:261:32)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:223:11)
+ @ ./app/javascript/components sync ^\.\/.*$ ./Greeting.js
+ @ ./app/javascript/packs/server_rendering.js
+
+  Rendered messages/index.html.erb within layouts/application (Duration: 3874.5ms | Allocations: 3022)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3883.6ms | Allocations: 5908)
+Completed 200 OK in 3930ms (Views: 3886.8ms | ActiveRecord: 17.6ms | Allocations: 13019)
+
+
+Started GET "/messages" for 127.0.0.1 at 2021-10-12 18:15:23 -0400
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 1.4ms | Allocations: 1043)
+
+
+Started GET "/messages" for 127.0.0.1 at 2021-10-12 18:17:19 -0400
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 1025)
+
+
+Started GET "/" for ::1 at 2021-10-12 18:23:33 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mihndim/Microverse/Hello-Rails-React/public/packs
+[Webpacker] Hash: ca2c466e6904725b4bd1
+Version: webpack 4.46.0
+Time: 1636ms
+Built at: 10/12/2021 6:23:35 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-f5b16384bb1a7fe22288.js   1.5 MiB       application  [emitted] [immutable]  application
+     js/application-f5b16384bb1a7fe22288.js.map  1.69 MiB       application  [emitted] [dev]        application
+         js/hello_react-d0424c60082737fd09b2.js  1.09 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-d0424c60082737fd09b2.js.map  1.26 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-71e6e52c04f52ee660ef.js  1.38 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-71e6e52c04f52ee660ef.js.map  1.56 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-f5b16384bb1a7fe22288.js js/application-f5b16384bb1a7fe22288.js.map
+Entrypoint hello_react = js/hello_react-d0424c60082737fd09b2.js js/hello_react-d0424c60082737fd09b2.js.map
+Entrypoint server_rendering = js/server_rendering-71e6e52c04f52ee660ef.js js/server_rendering-71e6e52c04f52ee660ef.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 710 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 47 hidden modules
+
+WARNING in ./app/javascript/components/Greeting.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/mihndim/Microverse/Hello-Rails-React/app/javascript/components/Greeting.js: Unexpected token (14:11)
+
+  12 | }
+  13 | Greeting.propTypes = {
+> 14 |   greeting = PropTypes.string
+     |            ^
+  15 | };
+  16 |
+  17 | export default Greeting
+    at Object._raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:541:17)
+    at Object.raiseWithData (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:534:17)
+    at Object.raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:495:17)
+    at Object.unexpected (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3550:16)
+    at Object.checkExpressionErrors (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3643:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11150:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11147:25)
+    at Object.parseExpressionBase (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11059:23)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:39
+    at Object.allowInAnd (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:12922:16)
+    at Object.parseExpression (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:17)
+    at Object.parseStatementContent (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13272:23)
+    at Object.parseStatement (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13139:17)
+    at Object.parseBlockOrModuleBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13728:25)
+    at Object.parseBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13719:10)
+    at Object.parseProgram (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13061:10)
+    at Object.parseTopLevel (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13052:25)
+    at Object.parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14800:10)
+    at parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14852:38)
+    at parser (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/index.js:29:50)
+    at run.next (<anonymous>)
+    at Function.transform (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:261:32)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:223:11)
+ @ ./app/javascript/components sync ^\.\/.*$ ./Greeting.js
+ @ ./app/javascript/packs/application.js
+
+  Rendered messages/index.html.erb within layouts/application (Duration: 2857.7ms | Allocations: 3024)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2865.4ms | Allocations: 5910)
+Completed 200 OK in 2898ms (Views: 2866.3ms | ActiveRecord: 16.5ms | Allocations: 13127)
+
+
+Started GET "/" for ::1 at 2021-10-12 18:23:37 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1729)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 4579)
+Completed 200 OK in 24ms (Views: 17.1ms | ActiveRecord: 1.2ms | Allocations: 5753)
+
+
+Started GET "/" for ::1 at 2021-10-12 18:25:42 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered messages/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1729)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4580)
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 1.3ms | Allocations: 5754)
+
+
+Started GET "/messages" for 127.0.0.1 at 2021-10-12 18:34:35 -0400
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 11.3ms | Allocations: 6860)
+
+
