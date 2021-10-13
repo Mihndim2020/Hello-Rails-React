@@ -4072,3 +4072,96 @@ Processing by MessagesController#index as */*
 Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 11.3ms | Allocations: 6860)
 
 
+Started GET "/" for ::1 at 2021-10-12 20:35:38 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 05b97fd494834a4e063e
+Version: webpack 4.46.0
+Time: 3402ms
+Built at: 10/12/2021 8:35:44 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-e06a5a11ec7708ebbee9.js  1.64 MiB       application  [emitted] [immutable]  application
+     js/application-e06a5a11ec7708ebbee9.js.map  1.81 MiB       application  [emitted] [dev]        application
+         js/hello_react-d0424c60082737fd09b2.js  1.09 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-d0424c60082737fd09b2.js.map  1.26 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-b9bac5def7a86e2662d6.js  1.52 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-b9bac5def7a86e2662d6.js.map  1.68 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-e06a5a11ec7708ebbee9.js js/application-e06a5a11ec7708ebbee9.js.map
+Entrypoint hello_react = js/hello_react-d0424c60082737fd09b2.js js/hello_react-d0424c60082737fd09b2.js.map
+Entrypoint server_rendering = js/server_rendering-b9bac5def7a86e2662d6.js js/server_rendering-b9bac5def7a86e2662d6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 710 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./app/javascript/redux/configStore.js] 342 bytes {application} {server_rendering} [built]
+[./app/javascript/redux/message.js] 1.95 KiB {application} {server_rendering} [built]
+[./app/javascript/redux/slice.js] 2.04 KiB {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 78 hidden modules
+
+WARNING in ./app/javascript/components/Greeting.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/mihndim/Microverse/Hello-Rails-React/app/javascript/components/Greeting.js: Unexpected token (15:11)
+
+  13 | }
+  14 | Greeting.propTypes = {
+> 15 |   greeting = PropTypes.string
+     |            ^
+  16 | };
+  17 |
+  18 | export default Greeting
+    at Object._raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:541:17)
+    at Object.raiseWithData (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:534:17)
+    at Object.raise (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:495:17)
+    at Object.unexpected (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3550:16)
+    at Object.checkExpressionErrors (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:3643:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11150:12)
+    at Object.parseMaybeAssign (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11147:25)
+    at Object.parseExpressionBase (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11059:23)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:39
+    at Object.allowInAnd (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:12922:16)
+    at Object.parseExpression (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:11053:17)
+    at Object.parseStatementContent (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13272:23)
+    at Object.parseStatement (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13139:17)
+    at Object.parseBlockOrModuleBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13728:25)
+    at Object.parseBlockBody (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13719:10)
+    at Object.parseProgram (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13061:10)
+    at Object.parseTopLevel (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:13052:25)
+    at Object.parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14800:10)
+    at parse (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/parser/lib/index.js:14852:38)
+    at parser (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transformation/index.js:29:50)
+    at run.next (<anonymous>)
+    at Function.transform (/home/mihndim/Microverse/Hello-Rails-React/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:261:32)
+    at /home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/home/mihndim/Microverse/Hello-Rails-React/node_modules/gensync/index.js:223:11)
+ @ ./app/javascript/components sync ^\.\/.*$ ./Greeting.js
+ @ ./app/javascript/packs/server_rendering.js
+
+ERROR in ./app/javascript/redux/configStore.js
+Module not found: Error: Can't resolve 'redux-logger' in '/home/mihndim/Microverse/Hello-Rails-React/app/javascript/redux'
+ @ ./app/javascript/redux/configStore.js 2:0-34 8:56-62
+ @ ./app/javascript/components/App.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+  Rendered messages/index.html.erb within layouts/application (Duration: 6004.2ms | Allocations: 2965)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6015.6ms | Allocations: 5851)
+Completed 200 OK in 6116ms (Views: 6017.4ms | ActiveRecord: 54.1ms | Allocations: 12970)
+
+
