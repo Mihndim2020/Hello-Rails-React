@@ -4,20 +4,18 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Greeting from './Greeting';
 import store from '../redux/configStore';
 
-class App extends React.Component {
-  render () {
-    return (
+const App = () => ( 
+  <React.Fragment>
+    <Provider store={store}>
       <Router>
         <Switch>
-          <Route path= '/'>
-            <Provider store={store}>
-              <Greeting />
-            </Provider>       
+          <Route exact path= '/'>
+            <Greeting />
           </Route>
         </Switch>
       </Router>
-    );
-  }
-}
+    </Provider>       
+  </React.Fragment>  
+);
 
-export default App
+export default App;
