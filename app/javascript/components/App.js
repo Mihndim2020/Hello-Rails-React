@@ -9,7 +9,7 @@ const App = () => (
     <Provider store={store}>
       <Router>
         <Switch>          
-            <Route exact path="/messages" render={() => <Greeting />} />
+            <Route exact path="/" render={() => <Greeting />} />
         </Switch>
       </Router>
     </Provider>       
