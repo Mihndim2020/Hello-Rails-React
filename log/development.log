@@ -17790,3 +17790,62 @@ Processing by V1::GreetingsController#index as JSON
 Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 4.9ms | Allocations: 1033)
 
 
+Started GET "/" for ::1 at 2021-10-15 09:07:48 -0400
+Processing by StaticController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mihndim/Microverse/Hello-Rails-React/public/packs
+[Webpacker] Hash: b161ff294c556b1afb89
+Version: webpack 4.46.0
+Time: 9744ms
+Built at: 10/15/2021 9:08:00 AM
+                                          Asset       Size            Chunks                         Chunk Names
+         js/application-92c36825918c7cfa70c9.js   1.65 MiB       application  [emitted] [immutable]  application
+     js/application-92c36825918c7cfa70c9.js.map   1.83 MiB       application  [emitted] [dev]        application
+    js/server_rendering-2f0c76ba170c12090ffb.js   1.54 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-2f0c76ba170c12090ffb.js.map    1.7 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  738 bytes                    [emitted]              
+Entrypoint application = js/application-92c36825918c7cfa70c9.js js/application-92c36825918c7cfa70c9.js.map
+Entrypoint server_rendering = js/server_rendering-2f0c76ba170c12090ffb.js js/server_rendering-2f0c76ba170c12090ffb.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 216 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 710 bytes {application} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./app/javascript/redux/configStore.js] 342 bytes {application} {server_rendering} [built]
+[./app/javascript/redux/message.js] 2.06 KiB {application} {server_rendering} [built]
+[./app/javascript/redux/slice.js] 2.05 KiB {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 79 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 12555.8ms | Allocations: 4331)
+Completed 200 OK in 12564ms (Views: 12560.7ms | Allocations: 4965)
+
+
+Started GET "/v1/messages" for ::1 at 2021-10-15 09:08:01 -0400
+Processing by V1::GreetingsController#index as JSON
+  [1m[36mMessage Load (2.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/greetings_controller.rb:3:in `index'
+Completed 200 OK in 94ms (Views: 2.5ms | ActiveRecord: 53.9ms | Allocations: 6921)
+
+
+Started GET "/" for ::1 at 2021-10-15 09:08:03 -0400
+Processing by StaticController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3024)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 3472)
+
+
+Started GET "/v1/messages" for ::1 at 2021-10-15 09:08:04 -0400
+Processing by V1::GreetingsController#index as JSON
+  [1m[36mMessage Load (1.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/v1/greetings_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 1.6ms | Allocations: 1033)
+
+
