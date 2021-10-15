@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Greeting from './Greeting';
@@ -8,10 +8,8 @@ const App = () => (
   <React.Fragment>
     <Provider store={store}>
       <Router>
-        <Switch>
-          <Route exact path= '/'>
-            <Greeting />
-          </Route>
+        <Switch>          
+            <Route exact path="/messages" render={() => <Greeting />} />
         </Switch>
       </Router>
     </Provider>       

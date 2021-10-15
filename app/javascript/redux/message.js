@@ -5,19 +5,21 @@ import {   GET_MESSAGE,
 // Initial state
 
 const initialState = {
- greeting: [],
+  message: "Good morning",
 };
 
 // Reducer
 
-const reducer = (state = initialState, action) => {
+const messageReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MESSAGE:
       return { ...state, pending: true };
     case GET_MESSAGE_SUCCESS:
     {
-      const greeting = message.body; 
-      return { ...state, pending: false, greeting };
+      console.log(action.message)
+      const greet = action.message
+      console.log(greet)
+      return { ...state, pending: false, message: action.message.body };
     }
     case GET_MESSAGE_ERR:
       return { ...state, pending: false, error: action.error };
@@ -26,4 +28,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default messageReducer;
